@@ -1,6 +1,10 @@
 from flask import Flask, request, jsonify
+from flask_sqlalchemy import SQLAlchemy
 
 app = Flask(__name__)
+app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///buildings.db'
+app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
+db = SQLAlchemy(app)
 
 # Роуты для построек
 @app.route('/buildings', methods=['GET'])
@@ -45,4 +49,8 @@ def calculate_credit():
     }
 
 if __name__ == '__main__':
+    with app.app_context():
+        db.create_all()
+        print("База данных создана!")
+
     app.run(debug=True)
