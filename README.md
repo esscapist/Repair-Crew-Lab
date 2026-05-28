@@ -1,10 +1,5 @@
 # Repair Crew Lab - Кредитование для строительных проектов
 
-[![Status](https://img.shields.io/badge/status-active-success.svg)]()
-[![Frontend](https://img.shields.io/badge/Frontend-HTML%2FCSS%2FJS-blue)]()
-[![License](https://img.shields.io/badge/license-MIT-green.svg)]()
-
----
 
 ## 📋 О проекте
 
